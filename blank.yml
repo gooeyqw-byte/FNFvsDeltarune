@@ -1,0 +1,13 @@
+name: Hello World Workflow
+on: [push, workflow_dispatch]  # 推送代码或手动点击都能触发
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 输出欢迎信息
+        run: echo "Hello, GitHub Actions is running successfully!"
+      - name: 输出时间戳
+        run: echo "Current time is $(date)"
+      - name: 模拟成功
+        run: echo "All steps passed! Job done."
